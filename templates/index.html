@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Generator</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #60c5e6, #fad0c4);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Centering Content */
+        .padding {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input Field Styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ff6f61;
+            outline: none;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e65c50;
+        }
+
+        /* Card Body Styling */
+        .card-body {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+
+        pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="padding">
+        <h1>Custom Recipe Generator</h1><br>
+        <form method="POST" action="/">
+            Ingredients/Items:<br>
+            <input type="text" name="items" placeholder="Type ingredients here" id="items">
+            <br><br>
+            <button type="submit" class="button">Share with me Recipe</button>
+        </form>
+
+        <div class="card-body">
+            <pre id="output" class="mb-0" style="white-space: pre-wrap">{{ ans }}</pre>
+        </div>
+    </div>
+</body>
+</html>
